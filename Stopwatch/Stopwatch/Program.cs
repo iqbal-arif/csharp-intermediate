@@ -23,10 +23,9 @@ namespace Stopwatch
 
                 if (stopwatchFucntion == "s")
                 {
-                    Console.WriteLine("\nStopwatch 'STARTED'\n");
+                    Console.WriteLine("\nStopwatch Start First Attempt 'STARTED'\n");
 
                     stopwatch.StartStopwatch();
-
 
                 }
                     Console.ReadLine().ToLower();
@@ -38,7 +37,7 @@ namespace Stopwatch
 
                     stopwatch.ClearStopwatch();
 
-                    Console.WriteLine("Stopwatch 'STARTED Again'\n");
+                    Console.WriteLine("Stopwatch Start Second Attempt 'STARTED Again'\n");
                     stopwatch.StartStopwatch();
                 }
                     Console.ReadLine().ToLower();

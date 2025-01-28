@@ -36,7 +36,7 @@ namespace Stopwatch
 
             TimeSpan _timeDifference = _end - _startOne;
 
-            Console.WriteLine($"\nThe Time Difference is {_timeDifference}");
+            Console.WriteLine($"\nThe 'TimeSpan' is {_timeDifference}");
         }
 
 
