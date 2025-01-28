@@ -8,22 +8,20 @@ namespace Stopwatch
         {
             string stopwatchFucntion;
 
-            string lapse = string.Empty;
-
             bool appRuntime = true;
             Console.WriteLine("Stopwatch Demo!\n");
 
             // Instanciating Stopwatch
             Stopwatch stopwatch = new Stopwatch();
 
-            Console.WriteLine("Welcome to Star Stopwatch\nPlease enter 'b' to 'Start', 'e' to End,\nOR 'q' to quit program\n");
+            Console.WriteLine("Welcome to STAR-STOPWATCH\nPlease enter 's' to 'Start', 'e' to End,\nOR 'q' to quit program\n");
 
             stopwatchFucntion = Console.ReadLine();
 
             do
             {
 
-                if (stopwatchFucntion == "b")
+                if (stopwatchFucntion == "s")
                 {
                     Console.WriteLine("\nStopwatch 'STARTED'\n");
 
@@ -33,33 +31,32 @@ namespace Stopwatch
                 }
                     Console.ReadLine().ToLower();
 
-                if (stopwatchFucntion == "b")
+                if (stopwatchFucntion == "s")
                 {
                     stopwatch.EndStopwatch();
                     Console.WriteLine("\nStopwatch 'STOPPED'\n");
+
+                    stopwatch.ClearStopwatch();
+
                     Console.WriteLine("Stopwatch 'STARTED Again'\n");
                     stopwatch.StartStopwatch();
                 }
                     Console.ReadLine().ToLower();
                 
-                if (stopwatchFucntion == "b")
+                if (stopwatchFucntion == "s")
                 {
-                    Console.WriteLine("\n' InvalidOperationException ' Can not 'START' & 'STOP' Twice in a row");
+                    Console.WriteLine("\n' InvalidOperationException ' Cannot 'START' & 'STOP' Twice in a row");
                     stopwatch.EndStopwatch();
                     appRuntime = false;
-
                 }
                     Console.ReadLine().ToLower();
-
 
                 if(stopwatchFucntion == "e")
                 {
                     Console.WriteLine("\nStopwatch 'STOPPED'\n");
                     stopwatch.EndStopwatch();
-
                 }
                     Console.ReadLine().ToLower();
-
 
                 if(stopwatchFucntion == "q" || stopwatchFucntion != "e")
                 {
@@ -69,8 +66,6 @@ namespace Stopwatch
                 }            
             }
             while (appRuntime);
-                    //Console.WriteLine("\nEnter '0' to Stop Stopwatch\n");
-
 
         }
     }
