@@ -1,0 +1,13 @@
+1. Class Stopwatch
+2. Two Methods: Start and Stop
+3. Calling Methods: Start first and Stop next
+4. Stopwatch duration: TimeSpan value display on console
+5. Use Stopwatch multiple times.
+	a. Start & Stop
+	b. Start & Stop
+	c. Calculate TimeSpan each time
+6. A Stopwatch SHOULD NOT START Twice in a ROW. And throw "InvalidOperationException" Error.
+
+Goals:
+1. Class is always in valid state
+2. Use Encapsulation (Hiding the workings)
