@@ -8,35 +8,46 @@
 
             bool loopCondition = true;
 
+            string voteIndicator;
             
 
 
             Post firstPost = new Post("CSharp","Beginner Course Drill", new DateTime());
 
 
-            do
-            {
                 Console.WriteLine("Please UpVote or DownVote the follow Post!\n");
 
                 firstPost.PostDisplay();
 
-                Console.WriteLine("Enter '1' for 'Up Vote' OR '0' for 'Down Vote' :\n");
 
-                int.Parse(Console.ReadLine());
+            do
+            {
+                Console.WriteLine("****************************************************");
 
-                int voteIndicator;
+                Console.WriteLine("\nEnter 'U' for 'Up Vote' OR 'D' for 'Down Vote' :\n");
 
-                if (voteIndicator == 1)
+                voteIndicator = Console.ReadLine().ToLower();
+
+                if(string.IsNullOrEmpty(voteIndicator) || voteIndicator == "e")
+                {
+                    loopCondition = false;
+                    break;
+
+                }else if (voteIndicator == "u")
                 {
                     firstPost.UpVote();
+                    firstPost.VoteDisplay();
+
+                }else if(voteIndicator == "d")
+                {
+                    firstPost.DownVote();
+                    firstPost.VoteDisplay();
                 }
-                
-
-
-                
+                                
             }
             while (true);
-            firstPost.UpVote();
+            
+
 
         }
     }

@@ -10,12 +10,9 @@ namespace StackOverflowPost
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        //public int Vote { get; private set; }
+        public int Vote { get; private set; } = 0;
         public DateTime PostTime { get; set; }
         public DateTime VoteTime { get; set; }
-
-        public int UpVoteValue { get; private set; } = 0;
-        public int DownVoteValue { get; private set; } = 0;
 
 
         public Post(string title, string description, DateTime postTime)
@@ -28,14 +25,27 @@ namespace StackOverflowPost
 
         public void UpVote() 
         {
-            UpVoteValue++;
+            Vote++;
             VoteTime = DateTime.Now;
-            Console.WriteLine($"Your Current UpVote : {UpVoteValue}\n");
+            Console.WriteLine($"Your Current UpVote : {Vote}\n");
         }
+
+
+        public void DownVote() 
+        { 
+            Vote--;
+            VoteTime = DateTime.Now;
+            Console.WriteLine($"Your Current DownVote : {Vote}\n");
+        } 
 
         public void PostDisplay() 
         {
             Console.WriteLine($"\n{PostTime}\n{Title}\n{Description}\n");
+        }
+
+        public void VoteDisplay()
+        {
+            Console.WriteLine($"The Current Vote Value is : '{Vote}' at {VoteTime}");
         }
     }
 }
