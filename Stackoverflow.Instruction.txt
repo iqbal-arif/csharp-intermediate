@@ -1,0 +1,24 @@
+
+StackOverFlow Post
+
+Class
+1. Class Post
+
+Properties
+
+1. Title
+2. Description
+3. Date/Time
+4. Set Vote (private)
+
+Method
+
+1. UpVote
+2. DownVote
+
+Main
+
+Display
+
+1. Vote Status
+2. Vote Value
